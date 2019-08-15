@@ -1,0 +1,2 @@
+# Use w3m to autoview HTML files
+text/html; w3m -I %{charset} -T text/html; copiousoutput;

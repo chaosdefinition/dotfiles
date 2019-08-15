@@ -1,0 +1,147 @@
+###############################################################################
+# Main configuration file #####################################################
+###############################################################################
+
+#
+# Folder hooks.
+#
+folder-hook "com\.hotmail"   "source ~/.mutt/com.hotmail/muttrc"
+folder-hook "com\.gmail"     "source ~/.mutt/com.gmail/muttrc"
+folder-hook "edu\.rochester" "source ~/.mutt/edu.rochester/muttrc"
+folder-hook "."              "set record=^"
+
+#
+# Default account.
+#
+source "~/.mutt/edu.rochester/muttrc"
+
+#
+# Macros for switching accounts.
+#
+macro index <f2> "<sync-mailbox><enter-command>\
+source ~/.mutt/com.hotmail/muttrc<enter><change-folder>!<enter>"
+macro index <f3> "<sync-mailbox><enter-command>\
+source ~/.mutt/com.gmail/muttrc<enter><change-folder>!<enter>"
+macro index <f4> "<sync-mailbox><enter-command>\
+source ~/.mutt/edu.rochester/muttrc<enter><change-folder>!<enter>"
+
+#
+# GPG settings.
+#
+source "~/.mutt/gpg.muttrc"
+
+#
+# File storage settings.
+#
+set message_cachedir = "~/.mutt/cache"          # Put message cache here
+set header_cache = "~/.mutt/cache/header_cache" # Put header cache here
+set tmpdir = "~/.mutt/tmp"                      # Put temporary files here
+
+#
+# Message view settings.
+#
+set pager_stop = yes                  # Do not move on to the next message
+set smart_wrap = yes                  # Wrap lines at word boundary
+set markers = no                      # Do not display a marker at wrapped lines
+set mailcap_path = "~/.mutt/mailcap"  # Where our MIME settings are defined
+auto_view text/html                   # View HTML automatically
+alternative_order text/plain
+
+#
+# Address line settings.
+#
+set reverse_realname = no # Always use my $realname
+
+#
+# Text editor.
+#
+set editor = "vim -c 'set tw=72' -c 'set fo=cqt'" # Automatic wrap line at 72
+
+#
+# Adress book handling.
+#
+set sort_alias = alias              # Sort aliases by the key
+set reverse_alias = yes             # Display sender's name from my aliases
+set alias_file = "~/.mutt/aliases"  # Where to find aliases
+source "~/.mutt/aliases"            # Load aliases
+
+#
+# Thread ordering.
+#
+set sort = threads                        # Sort messages by thread
+set sort_browser = reverse-date           #
+set sort_aux = reverse-last-date-received # Put latest messages on top
+set menu_scroll = yes                     # Scroll down line by line
+unset collapse_unread
+
+#
+# Formats.
+#
+set date_format = "!%m/%d/%Y %I:%M %p %z" # Date format (see `man strftime(3)`)
+set attribution = "On %d, %n wrote:"      # Attribution string
+set forward_format = "Fwd: %s"            # Title for forwarded message
+set forward_quote = yes                   # Quote forwarded message
+set index_format = " %?M?   ↳&%4C? | %Z | %D | %-20.20n | %s"
+
+#
+# Charset.
+#
+set charset = "utf-8"
+set assumed_charset = "utf-8"
+set send_charset = "utf-8:us-ascii"
+
+#
+# Miscellaneous.
+#
+set beep = no               # Do not beep
+set use_ipv6 = no           # Currently do not use IPv6
+set hostname = "`hostname`" # Set hostname to what the command reports
+
+#
+# Key bindings.
+#
+
+# Mailboxes
+bind  index G         imap-fetch-mail
+
+# Index
+bind  index <up>      previous-entry
+bind  index <down>    next-entry
+bind  index <delete>  delete-message
+bind  index n         next-entry
+bind  index p         previous-entry
+bind  index C         noop
+bind  index -         collapse-thread
+bind  index _         collapse-all
+macro index Q         ":set quit = yes\nq" "Quit mutt without asking"
+
+# Pager
+bind  pager <up>      previous-line
+bind  pager <down>    next-line
+bind  pager <left>    previous-entry
+bind  pager <right>   next-entry
+bind  pager <delete>  delete-message
+bind  pager k         previous-line
+bind  pager j         next-line
+bind  pager n         next-entry
+bind  pager p         previous-entry
+bind  pager w         previous-page
+
+# Colors
+color normal      white default
+color attachment  brightyellow default
+color hdrdefault  cyan default
+color indicator   black cyan
+color markers     brightred default
+color quoted      green default
+color signature   cyan default
+color status      brightgreen blue
+color tilde       blue default
+color tree        red default
+color header      brightgreen default ^From:
+color header      brightcyan default ^To:
+color header      brightcyan default ^Reply-To:
+color header      brightcyan default ^Cc:
+color header      brightblue default ^Subject:
+color body        brightred default [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
+color body        brightblue default (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+

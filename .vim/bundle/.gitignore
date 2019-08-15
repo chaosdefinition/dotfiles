@@ -1,0 +1,6 @@
+# Ignore everything
+*
+
+# But keep itself and Vundle.vim
+!.gitignore
+!Vundle.vim

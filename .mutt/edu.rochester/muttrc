@@ -1,0 +1,48 @@
+###############################################################################
+# Configuration file for UR email #############################################
+###############################################################################
+
+#
+# Load user config.
+#
+source "~/.mutt/edu.rochester/user"
+
+#
+# Load mailing lists.
+#
+source "~/.mutt/edu.rochester/mailing_lists"
+
+#
+# IMAP config.
+#
+set imap_user = "$my_username"            # IMAP username
+set imap_pass = "$my_password"            # IMAP password
+set imap_authenticators = login           # IMAP authentication method
+
+set folder = "imaps://outlook.office365.com/" # IMAP server URL
+set spoolfile = "+$my_inbox_noquote"          # Inbox
+set postponed = "+$my_drafts_noquote"         # Drafts
+set record = "+$my_inbox_noquote"             # Put sent emails in inbox
+set trash = "+$my_trash_noquote"              # Deleted
+mailboxes
+
+set timeout = 600         # Maximum time for Mutt to wait for input
+set mail_check = 15       # Interval for checking new emails
+set imap_keepalive = 180  # Interval for polling open IMAP connection
+set imap_idle = yes       # Use IMAP IDLE extension to check new emails
+unset mark_old            # Do not mark unread messages as old
+
+#
+# SMTP config.
+#
+set realname = "$my_realname"         # My real name in From line
+set from = "$my_email_address"        # My email address in From line
+set smtp_pass = "$my_password"        # SMTP password
+set smtp_authenticators = login       # SMTP authentication method
+set smtp_url = "smtp://$my_username@outlook.office365.com:587/"
+
+#
+# Connection settings
+#
+set ssl_starttls = yes  # Use STARTTLS for connections
+set ssl_force_tls = yes # Always encrypt connections

@@ -1,0 +1,21 @@
+# vim: set ft=muttrc:
+
+#
+# User config
+#
+
+# Credentials
+set my_realname = "Zhuojia Shen"
+set my_username = "zhuojia.shen@gmail.com"
+set my_email_address = "zhuojia.shen@gmail.com"
+source "gpg -dq ~/.mutt/com.gmail/password.gpg |"
+
+# Mailboxes
+set my_inbox = "INBOX"
+set my_inbox_noquote = "INBOX"
+set my_drafts = "[gmail]/Drafts"
+set my_drafts_noquote = "[gmail]/Drafts"
+set my_sent = "[gmail]/Sent<quote-char><space>Mail"
+set my_sent_noquote = "[gmail]Sent Mail"
+set my_trash = "[gmail]/Trash"
+set my_trash_noquote = "[gmail]/Trash"

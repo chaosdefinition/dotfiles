@@ -1,0 +1,9 @@
+#
+# NOTE: Add a trailing space to keep aliases.
+#
+
+alias ls='ls --color --group-directories-first '
+alias ll='ls -la '
+alias cls='printf "\033c" '
+alias grep='grep --color '
+alias sudo='sudo '

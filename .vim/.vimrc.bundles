@@ -1,0 +1,15 @@
+filetype off
+
+" Set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin('~/.vim/bundle')
+
+" Let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+
+" Bundles
+Plugin 'scrooloose/nerdtree'
+Plugin 'Superbil/llvm.vim'
+
+call vundle#end()
+filetype plugin indent on
