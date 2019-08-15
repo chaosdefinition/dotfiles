@@ -5,12 +5,12 @@
 #
 # Load user config.
 #
-source "~/.mutt/com.hotmail/user"
+source "~/.mutt/com.hotmail/user.muttrc"
 
 #
 # Load mailing lists
 #
-source "~/.mutt/com.hotmail/mailing_lists"
+source "~/.mutt/com.hotmail/mailing_lists.muttrc"
 
 #
 # IMAP config.

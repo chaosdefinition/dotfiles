@@ -5,12 +5,12 @@
 #
 # Load user config.
 #
-source "~/.mutt/edu.rochester/user"
+source "~/.mutt/edu.rochester/user.muttrc"
 
 #
 # Load mailing lists.
 #
-source "~/.mutt/edu.rochester/mailing_lists"
+source "~/.mutt/edu.rochester/mailing_lists.muttrc"
 
 #
 # IMAP config.

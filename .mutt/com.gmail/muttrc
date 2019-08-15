@@ -5,7 +5,7 @@
 #
 # Load user config.
 #
-source "~/.mutt/com.gmail/user"
+source "~/.mutt/com.gmail/user.muttrc"
 
 #
 # IMAP config.
