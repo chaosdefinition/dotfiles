@@ -9,7 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Bundles
 Plugin 'scrooloose/nerdtree'
-Plugin 'Superbil/llvm.vim'
+Plugin 'ararslan/llvm.vim'
 
 call vundle#end()
 filetype plugin indent on
