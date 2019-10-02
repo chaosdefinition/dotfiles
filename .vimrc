@@ -207,8 +207,3 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:tex_flavor = "latex"  " Default LaTeX
 let NERDTreeShowHidden = 1  " Show hidden files in NERDTree
-
-" Set term to xterm if running on tmux
-if &term !~ '^xterm' && exists('$TMUX')
-  set term=xterm
-endif
