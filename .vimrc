@@ -136,6 +136,12 @@ if has("autocmd")
 
   augroup END
 
+  " Highlight trailing whitespace.
+  highlight WhitespaceEOL ctermbg=DarkYellow guibg=DarkYellow
+  autocmd BufWinEnter * match WhitespaceEOL /\s\+$/
+  autocmd InsertEnter * match WhitespaceEOL /\s\+$/
+  autocmd InsertLeave * match WhitespaceEOL /\s\+$/
+
   " Use c highlighting for .h files by default (instead of cpp)
   autocmd BufNewFile,BufRead *.h setfiletype c
 
