@@ -89,6 +89,9 @@ map <F6> :setlocal spell! spell?<CR>
 " Toggle NERDTree
 map <C-O> :NERDTreeToggle<CR>
 
+" New tab
+map <C-N> :tabedit<CR>
+
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 " Revert with ":iunmap <C-U>".
