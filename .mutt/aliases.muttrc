@@ -10,43 +10,58 @@ alias ferguson George Ferguson <ferguson@cs.rochester.edu>
 alias gildea Daniel Gildea <gildea@cs.rochester.edu>
 alias lane Lane Hemaspaandra <lane@cs.rochester.edu>
 alias mehoque Ehsan Hoque <mehoque@cs.rochester.edu>
-alias thoward Thomas Howard <thoward@cs.rochester.edu>
-alias ipek Engin Ipek <ipek@cs.rochester.edu>
+alias rjacobs Robert Jacobs <rjacobs@ur.rochester.edu>
 alias kautz Henry Kautz <kautz@cs.rochester.edu>
-alias jliu Ji Liu <jliu@cs.rochester.edu>
 alias jluo Jiebo Luo <jluo@cs.rochester.edu>
+alias fnargesi Fatemeh Nargesian <f.nargesian@rochester.edu>
 alias nelson Randal Nelson <nelson@cs.rochester.edu>
-alias sree Sreepathi Pai <sreepathi.pai@rochester.edu>
+alias sree Sreepathi Pai <sree@cs.rochester.edu>
 alias pawlicki Ted Pawlicki <pawlicki@cs.rochester.edu>
+alias apurtee Adam Purtee <apurtee@cs.rochester.edu>
 alias schubert Lenhart Schubert <schubert@cs.rochester.edu>
 alias scott Michael Scott <scott@cs.rochester.edu>
 alias stefanko Daniel Stefankovic <stefanko@cs.rochester.edu>
 alias muthuv Muthuramakrishnan Venkitasubramaniam <muthuv@cs.rochester.edu>
 alias cxu22 Chenliang Xu <chenliang.xu@rochester.edu>
 alias yzhu67 Yuhao Zhu <yzhu@rochester.edu>
-
-# URCS Faculty Teaching
-alias tbiswas2 Tamal Biswas <tbiswas2@cs.rochester.edu>
 alias ezhupa Eustrat Zhupa <ezhupa@cs.rochester.edu>
 
-# URCS Faculty Emeritus
-alias joel Joel Seiferas <joel@cs.rochester.edu>
+# URCS Faculty Secondary, Adjuncts, and Affiliates
 alias brown Chris Brown <brown@cs.rochester.edu>
-
-# URCS Lab Staff
-alias roche Jim Roche <roche@cs.rochester.edu>
-alias costello Dave Costello <costello@cs.rochester.edu>
+alias bukys Liudvikas Bukys <bukys@cs.rochester.edu>
+alias zduan Zhiyao Duan <zhiyao.duan@rochester.edu>
+alias gghoshal Gourab Ghoshal <gghoshal@pas.rochester.edu>
+alias pguo Philip Guo <pg@cs.rochester.edu>
+alias rhaefne2 Ralf Haefner <rhaefne2@ur.rochester.edu>
+alias wheinzel Wendi Heinzelman <wendi.heinzelman@rochester.edu>
+alias thoward Thomas Howard <thoward@ece.rochester.edu>
+alias mihuang Michael Huang <michael.huang@rochester.edu>
+alias tbiswas2 Tamal Biswas <tbiswas2@cs.rochester.edu>
+alias ipek Engin Ipek <engin.ipek@rochester.edu>
+alias fjaeger Florian Jaeger <fjaeger@ur.rochester.edu>
+alias rkostin Robert Kostin <robert.kostin@rochester.edu>
+alias jliu Ji Liu <jliu@cs.rochester.edu>
+alias jloporca Joseph Loporcaro <j.loporcaro@rochester.edu>
+alias rraqueno Rolando Raqueño <rraqueno@cs.rochester.edu>
+alias sroot Scott Root <sroot@cs.rochester.edu>
+alias rsarkis Richard Sarkis <rsarkis@cs.rochester.edu>
+alias joel Joel Seiferas <joel@cs.rochester.edu>
+alias gsharma Gaurav Sharma <gaurav.sharma@rochester.edu>
+alias kshen Kai Shen <kshen@cs.rochester.edu>
+alias dtemperley David Temperley <dtemperley@esm.rochester.edu>
+alias awhite Aaron White <aaron.white@rochester.edu>
 
 # URCS Staff
-alias mkiso Michelle Kiso <mkiso@cs.rochester.edu>
-alias epullara Eileen Pullara <epullara@cs.rochester.edu>
-alias marty Marty Guenther <marty@cs.rochester.edu>
-alias ecorriga Beth Corrigan <ecorriga@cs.rochester.edu>
+alias jbrennan Jennifer Brennan <jennifer.brennan@rochester.edu>
+alias costello Dave Costello <costello@cs.rochester.edu>
+alias sklinkbe Sara Klinkbeil <sklinkbe@cs.rochester.edu>
 alias kristi Kristi Kongmany <kristi@cs.rochester.edu>
-alias melissa Melissa Singkhamsack <melissas@cs.rochester.edu>
-alias bwilkins Brynn Wilkins <bwilkins@cs.rochester.edu>
-alias vanessa Vanessa Phengsomphane <vanessa@cs.rochester.edu>
-alias jouimett Janet Ouimette <jouimett@cs.rochester.edu>
+alias jprice23 Jenna Price <jprice23@cs.rochester.edu>
+alias epullara Eileen Pullara <epullara@cs.rochester.edu>
+alias arigolo Amanda Rigolo <amanda.rigolo@rochester.edu>
+alias roche Jim Roche <roche@cs.rochester.edu>
+alias etevens Emily Tevens <etevens@cs.rochester.edu>
+alias dvanderh Dani Vander Horst <dvanderh@cs.rochester.edu>
 
 # 2011
 alias ryates Ryan Yates <ryates@cs.rochester.edu>
@@ -133,6 +148,21 @@ alias szhang83 Songyang Zhang <szhang83@cs.rochester.edu>
 alias hzheng15 Haitian Zheng <hzheng15@cs.rochester.edu>
 alias wzhu15 Wei Zhu <wzhu15@cs.rochester.edu>
 
+# 2019
+alias yan2 Hannah An <yan2@cs.rochester.edu>
+alias mdu5 Mingzhe Du <mdu5@cs.rochester.edu>
+alias wgantt Will Gantt <wgantt@cs.rochester.edu>
+alias sgupta45 Suhanshu Gupta <sgupta45@cs.rochester.edu>
+alias khaut Kurtis Haut <khaut@cs.rochester.edu>
+alias bkane2 Ben Kane <bkane2@cs.rochester.edu>
+alias breber Benjamin Reber <breber@cs.rochester.edu>
+alias wsmith6 Wes Smith <wsmith6@cs.rochester.edu>
+alias bvalpey Benji Valpey <bvalpey@cs.rochester.edu>
+alias svashis3 Sid Vashishtaha <svashis3@cs.rochester.edu>
+alias szhai2 Shuang Zhai <szhai2@cs.rochester.edu>
+alias zzhang95 Zheng Zhang <zzhang95@cs.rochester.edu>
+alias xzhou50 Xiaofei Zhou <xzhou50@cs.rochester.edu>
+
 # Mailing lists
 alias everybody CS Everybody <everybody@cs.rochester.edu>
 alias faculty CS Faculty <faculty@cs.rochester.edu>
@@ -146,5 +176,6 @@ alias rocsec RocSec <rocsec@googlegroups.com>
 alias fbsd-hackers FreeBSD Hackers <freebsd-hackers@freebsd.org>
 
 # Others
-alias leiliu Lei Liu <liulei2010@ict.ac.cn>
 alias alc Alan Cox <alc@rice.edu>
+alias leiliu Lei Liu <liulei2010@ict.ac.cn>
+alias zxzics Ziming Zhao <zxzics@rit.edu>
