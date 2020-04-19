@@ -101,6 +101,7 @@ set send_charset = "utf-8:us-ascii"
 set beep = no               # Do not beep
 set use_ipv6 = no           # Currently do not use IPv6
 set hostname = "`hostname`" # Set hostname to what the command reports
+set user_agent = yes        # Add "User-Agent:" header to outgoing messages
 
 #
 # Key bindings.
