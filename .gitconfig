@@ -16,3 +16,5 @@
 	smudge = git-lfs smudge -- %f
 [core]
 	autocrlf = input
+[diff]
+	algorithm = patience
