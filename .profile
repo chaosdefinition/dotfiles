@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# We have executed .profile
+PROFILE_DEFINED=1
+
 #
 # Add a path to a specified environment variable.
 #
@@ -66,6 +69,6 @@ fi
 ###############################################################################
 
 # Source .bashrc
-if [ "$BASH_VERSION" ] && [ -f "$HOME/.bashrc" ]; then
+if [ "$BASH_VERSION" ] && [ -f "$HOME/.bashrc" ] && [ -z ${BASHRC_DEFINED+x} ]; then
     . "$HOME/.bashrc"
 fi

@@ -2,6 +2,14 @@
 
 # Chaos's bashrc, source this file in .profile.
 
+# We have executed .bashrc
+BASHRC_DEFINED=1
+
+# Source .profile if we haven't done so
+if [ -f "$HOME/.profile" ] && [ -z ${PROFILE_DEFINED+x} ]; then
+    . "$HOME/.profile"
+fi
+
 # File creation mask, 644 for regular files, 755 for directories
 umask 022
 
