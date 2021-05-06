@@ -34,8 +34,8 @@ HISTFILESIZE=200000
 if which vim >/dev/null 2>&1; then
     export EDITOR="vim"     # Default editor
 fi
-if which most >/dev/null 2>&1; then
-    export PAGER="most"     # Default pager
+if which less >/dev/null 2>&1; then
+    export PAGER="less"     # Default pager
 fi
 
 # Set aliases
@@ -94,6 +94,16 @@ export PROMPT_COMMAND=prompt_command
 
 # Colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# Color man pages
+export LESS_TERMCAP_mb=$'\E[01;32m'
+export LESS_TERMCAP_md=$'\E[01;32m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;47;34m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;36m'
+export LESS="-S -R -Q --mouse --wheel-lines=1"
 
 # Custom ls colors
 if [[ -f "$HOME/.dir_colors" ]]; then
