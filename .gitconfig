@@ -18,3 +18,5 @@
 	autocrlf = input
 [diff]
 	algorithm = patience
+[pull]
+	ff = only
