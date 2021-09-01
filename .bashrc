@@ -51,42 +51,71 @@ prompt_command() {
     local normal="\[\e[0m\]"        # Normal color
     local fGbBb="\[\e[1;32;44m\]"   # Green foreground, blue background, bold
     local fYbBb="\[\e[1;33;44m\]"   # Yellow foreground, blue background, bold
-    local fP="\[\e[35m\]"           # Purple foreground
+    local fM="\[\e[35m\]"           # Magenta foreground
     local fBb="\[\e[1;34m\]"        # Blue foreground, bold
-    local fY="\[\e[0;33m\]"         # Yellow foreground
-    local fR="\[\e[0;31m\]"         # Red foreground
+    local fY="\[\e[33m\]"           # Yellow foreground
+    local fR="\[\e[31m\]"           # Red foreground
+    local fLM="\[\e[95m\]"          # Light magenta foreground
+
+    # Current date & time
+    local datetime=`date "+%F %T %z" 2> /dev/null`
 
     # Git prompt
     local git_branch=`__git_ps1 2> /dev/null`
 
     # Set PS1
     if [[ "$PS1" ]]; then
-        PS1="$fGbBb"
-        PS1="$PS1\u"                    # Username
-        PS1="$PS1$fYbBb"
-        PS1="$PS1@"                     # @
-        PS1="$PS1$fGbBb"
-        PS1="$PS1\h"                    # Hostname
-        PS1="$PS1$normal"
-        PS1="$PS1 "                     # <Space>
-        PS1="$PS1$fP"
-        PS1="${PS1}bash"                # bash
-        PS1="$PS1$normal"
-        PS1="$PS1 "                     # <Space>
-        PS1="$PS1$fBb"
-        PS1="$PS1\w"                    # PWD
-        PS1="$PS1$fY"
+        # Set up left-aligned part
+        PS1LHS="\["                     # Start group
+        PS1LHS="$PS1LHS$fGbBb"
+        PS1LHS="$PS1LHS\u"              # Username
+        PS1LHS="$PS1LHS$fYbBb"
+        PS1LHS="$PS1LHS@"               # @
+        PS1LHS="$PS1LHS$fGbBb"
+        PS1LHS="$PS1LHS\h"              # Hostname
+        PS1LHS="$PS1LHS$normal"
+        PS1LHS="$PS1LHS "               # <Space>
+        PS1LHS="$PS1LHS$fM"
+        PS1LHS="${PS1LHS}bash"          # bash
+        PS1LHS="$PS1LHS$normal"
+        PS1LHS="$PS1LHS "               # <Space>
+        PS1LHS="$PS1LHS$fBb"
+        PS1LHS="$PS1LHS\w"              # PWD
+        PS1LHS="$PS1LHS$normal"
+        PS1LHS="$PS1LHS$fY"
         if [[ -n "$git_branch" ]]; then
-            PS1="$PS1$git_branch"       # Current Git branch name
+            PS1LHS="$PS1LHS$git_branch" # Current Git branch name
         fi
-        PS1="$PS1$normal"
-        PS1="$PS1\n"                    # Newline
+        PS1LHS="$PS1LHS$normal"
+        PS1LHS="$PS1LHS\]"              # End group
+
+        local ps1lhs_plain="$USER@${HOSTNAME%%.*} bash `dirs 2> /dev/null`$git_branch"
+
+        # Set up right-aligned part
+        PS1RHS="\["                     # Start group
+        if (( COLUMNS - ${#ps1lhs_plain} % COLUMNS < ${#datetime} )); then
+            # Start a newline if date+time cannot fit in the current line
+            PS1RHS="$PS1RHS\n"
+            PS1RHS="$PS1RHS\e[$(( COLUMNS - ${#datetime} ))C"
+        elif (( COLUMNS - ${#ps1lhs_plain} % COLUMNS > ${#datetime} )); then
+            PS1RHS="$PS1RHS\e[$(( COLUMNS - ${#ps1lhs_plain} % COLUMNS - ${#datetime} ))C"
+        fi
+        PS1RHS="$PS1RHS$fLM"
+        PS1RHS="$PS1RHS$datetime"       # Current date & time
+        PS1RHS="$PS1RHS$normal"
+        PS1RHS="$PS1RHS\]"              # End group
+
+        # Set up the last part
+        PS1LAST="\["                    # Start group
+        PS1LAST="$PS1LAST\n"            # Newline
         if [[ "$exit_status" != 0 ]]; then
-            PS1="$PS1$fR"
+            PS1LAST="$PS1LAST$fR"
         fi
-        PS1="$PS1\\$"                   # UID indicator
-        PS1="$PS1$normal"
-        PS1="$PS1 "                     # <Space>
+        PS1LAST="$PS1LAST\\$"           # UID indicator
+        PS1LAST="$PS1LAST$normal"
+        PS1LAST="$PS1LAST "             # <Space>
+
+        PS1="$PS1LHS$PS1RHS$PS1LAST"
         export PS1
     fi
 }
