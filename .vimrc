@@ -30,6 +30,7 @@ set nowrap          " do not wrap lines
 set hlsearch        " highlight search results
 set visualbell      " disable beeping
 set t_vb=           " disable visual bell
+set redrawtime=5000 " 5-second redraw timeout
 
 " Manually set up color scheme
 colorscheme chaos
