@@ -114,6 +114,7 @@ prompt_command() {
         PS1LAST="$PS1LAST\\$"           # UID indicator
         PS1LAST="$PS1LAST$normal"
         PS1LAST="$PS1LAST "             # <Space>
+        PS1LAST="$PS1LAST\]"            # End group
 
         PS1="$PS1LHS$PS1RHS$PS1LAST"
         export PS1
