@@ -106,15 +106,13 @@ prompt_command() {
         PS1RHS="$PS1RHS\]"              # End group
 
         # Set up the last part
-        PS1LAST="\["                    # Start group
-        PS1LAST="$PS1LAST\n"            # Newline
+        PS1LAST="\n"                    # Newline
         if [[ "$exit_status" != 0 ]]; then
             PS1LAST="$PS1LAST$fR"
         fi
         PS1LAST="$PS1LAST\\$"           # UID indicator
         PS1LAST="$PS1LAST$normal"
         PS1LAST="$PS1LAST "             # <Space>
-        PS1LAST="$PS1LAST\]"            # End group
 
         PS1="$PS1LHS$PS1RHS$PS1LAST"
         export PS1
