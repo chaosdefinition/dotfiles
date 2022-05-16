@@ -218,7 +218,7 @@ endif
 let g:tex_flavor = "latex"  " Default LaTeX
 let NERDTreeShowHidden = 1  " Show hidden files in NERDTree
 
-set directory=~/.vim/swap/
+set directory=~/.vim/swap//
 
 if &term =~ '^screen'
     " tmux will send xterm-style keys when its xterm-keys option is on
