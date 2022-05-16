@@ -35,7 +35,7 @@ set crypt_verify_sig = yes
 # Unless your key does not have encryption capability, uncomment this
 # line and replace the keyid with your own.
 #
-set smime_default_key="e41b3f37.0"
+set smime_default_key="a3dc0f63.0"
 
 # If you have a separate signing key, or your key _only_ has signing
 # capability, uncomment this line and replace the keyid with your
