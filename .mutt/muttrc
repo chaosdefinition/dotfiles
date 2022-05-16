@@ -18,11 +18,24 @@ source "~/.mutt/edu.rochester/muttrc"
 #
 # Macros for switching accounts.
 #
+# F2        -> Sync the current mailbox and switch to Outlook
+# F3        -> Sync the current mailbox and switch to Gmail
+# F4        -> Sync the current mailbox and switch to UR
+# Ctrl + F2 -> Switch to Outlook
+# Ctrl + F3 -> Switch to Gmail
+# Ctrl + F4 -> Switch to UR
+#
 macro index <f2> "<sync-mailbox><enter-command>\
 source ~/.mutt/com.hotmail/muttrc<enter><change-folder>!<enter>"
 macro index <f3> "<sync-mailbox><enter-command>\
 source ~/.mutt/com.gmail/muttrc<enter><change-folder>!<enter>"
 macro index <f4> "<sync-mailbox><enter-command>\
+source ~/.mutt/edu.rochester/muttrc<enter><change-folder>!<enter>"
+macro index <f26> "<enter-command>\
+source ~/.mutt/com.hotmail/muttrc<enter><change-folder>!<enter>"
+macro index <f27> "<enter-command>\
+source ~/.mutt/com.gmail/muttrc<enter><change-folder>!<enter>"
+macro index <f28> "<enter-command>\
 source ~/.mutt/edu.rochester/muttrc<enter><change-folder>!<enter>"
 
 #
