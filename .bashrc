@@ -141,9 +141,9 @@ export LESS="-S -R -Q --mouse --wheel-lines=1"
 
 # Custom ls colors
 if [[ -f "$HOME/.dir_colors" ]]; then
-    eval `dircolors "$HOME/.dir_colors"`
+    eval `dircolors --sh "$HOME/.dir_colors"`
 elif [[ -f "/etc/DIR_COLORS" ]]; then
-    eval `dircolors "/etc/DIR_COLORS"`
+    eval `dircolors --sh "/etc/DIR_COLORS"`
 fi
 
 # Set up bash-completion and git-prompt
