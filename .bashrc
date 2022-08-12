@@ -75,8 +75,7 @@ prompt_command() {
     # Set PS1
     if [[ "$PS1" ]]; then
         # Set up left-aligned part
-        PS1LHS="\["                     # Start group
-        PS1LHS="$PS1LHS$fGbBb"
+        PS1LHS="$fGbBb"
         PS1LHS="$PS1LHS\u"              # Username
         PS1LHS="$PS1LHS$fYbBb"
         PS1LHS="$PS1LHS@"               # @
@@ -96,12 +95,11 @@ prompt_command() {
             PS1LHS="$PS1LHS$git_branch" # Current Git branch name
         fi
         PS1LHS="$PS1LHS$normal"
-        PS1LHS="$PS1LHS\]"              # End group
 
         local ps1lhs_plain="$user@${HOSTNAME%%.*} bash `dirs 2> /dev/null`$git_branch"
 
         # Set up right-aligned part
-        PS1RHS="\["                     # Start group
+        PS1RHS=""
         if (( COLUMNS - ${#ps1lhs_plain} % COLUMNS < ${#datetime} )); then
             # Start a newline if date+time cannot fit in the current line
             PS1RHS="$PS1RHS\n"
@@ -112,7 +110,6 @@ prompt_command() {
         PS1RHS="$PS1RHS$fLM"
         PS1RHS="$PS1RHS$datetime"       # Current date & time
         PS1RHS="$PS1RHS$normal"
-        PS1RHS="$PS1RHS\]"              # End group
 
         # Set up the last part
         PS1LAST="\n"                    # Newline
