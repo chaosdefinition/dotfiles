@@ -63,6 +63,15 @@ prompt_command() {
     # Git prompt
     local git_branch=`__git_ps1 2> /dev/null`
 
+    # Username
+    local user="$USER"
+    if [[ -z "$user" ]]; then
+        user="$USERNAME"
+    fi
+    if [[ -z "$user" ]]; then
+        user=`whoami`
+    fi
+
     # Set PS1
     if [[ "$PS1" ]]; then
         # Set up left-aligned part
@@ -89,7 +98,7 @@ prompt_command() {
         PS1LHS="$PS1LHS$normal"
         PS1LHS="$PS1LHS\]"              # End group
 
-        local ps1lhs_plain="$USER@${HOSTNAME%%.*} bash `dirs 2> /dev/null`$git_branch"
+        local ps1lhs_plain="$user@${HOSTNAME%%.*} bash `dirs 2> /dev/null`$git_branch"
 
         # Set up right-aligned part
         PS1RHS="\["                     # Start group
